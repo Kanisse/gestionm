@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-route::get('/show', [Test::class,'pc']);
+
 
 Route::get('/', function () {
     return Redirect() -> route('login');
