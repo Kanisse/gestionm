@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\ClientController;
+use App\Http\Controllers\ProduitController;
 use App\Http\Controllers\Test;
 use Illuminate\Support\Facades\Route;
 
@@ -19,6 +21,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return Redirect() -> route('login');
 });
+
+Route :: resources([
+    'produits' => ProduitController::class,
+    'clients' => ClientController::class,
+]);
 
 Auth::routes();
 
