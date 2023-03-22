@@ -16,9 +16,9 @@ class ClientPolicy
      * @param  \App\Models\User  $user
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function viewAny(User $user)
+    public function viewAny(User $user, Client $client)
     {
-        //
+        return $user -> id == $client -> id_user;
     }
 
     /**
@@ -30,7 +30,7 @@ class ClientPolicy
      */
     public function view(User $user, Client $client)
     {
-        //
+        return $user -> id == $client -> id_user;
     }
 
     /**
@@ -77,7 +77,7 @@ class ClientPolicy
      */
     public function restore(User $user, Client $client)
     {
-        //
+        return $user -> id == 1;
     }
 
     /**

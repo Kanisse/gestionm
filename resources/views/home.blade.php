@@ -3,7 +3,9 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-
+@auth
+    
+@endauth
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">{{ __('Dashboard') }}</div>
@@ -14,6 +16,8 @@
                             {{ session('status') }}
                         </div>
                     @endif
+
+                  
 
 @can('isAdmin')
 <div class="alert alert-primary" role="alert">

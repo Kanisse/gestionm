@@ -22,11 +22,12 @@ Route::get('/', function () {
     return Redirect() -> route('login');
 });
 
-Route :: resources([
-    'produits' => ProduitController::class,
-    'clients' => ClientController::class,
-]);
+
 
 Auth::routes();
+
+Route::get('produitbyclient', 
+[App\Http\Controllers\ClientController::class], 'showproduct')
+-> name('productbyclient');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

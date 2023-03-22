@@ -17,6 +17,9 @@ return new class extends Migration
             $table->id();
             $table -> String("Nom");
             $table -> float("prix");
+            $table -> unsignedBigInteger("Id_client");
+            $table -> foreign("Id_client") -> references('id') ->on('clients')
+            ->onDelete('restrict') -> onUpdate('restrict');
             $table->timestamps();
         });
     }

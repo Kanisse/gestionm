@@ -19,6 +19,7 @@ class ProduitFactory extends Factory
         return [
             'Nom' => $this -> faker -> sentence(3),
             'prix' => rand(500, 6000),
+            "Id_client" => rand(1,20),
             'created_at' => now(),
             'updated_at' => now()
         ];

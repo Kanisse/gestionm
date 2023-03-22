@@ -29,7 +29,13 @@
                 <a class="btn btn-warning" href="">Modifier</a>
             </td>
             @endcan
-            
+            <td> 
+            <a  class="btn btn-info" href="{{ route ('productbyclient',$value->id) }}">
+                liste des produits
+            </a>
+                
+                
+            </td>
         </tr>
         @endforeach
     </tbody>

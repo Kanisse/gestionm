@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Client;
 use App\Http\Requests\StoreClientRequest;
 use App\Http\Requests\UpdateClientRequest;
+use App\Models\Produit;
 
 class ClientController extends Controller
 {
@@ -15,8 +16,7 @@ class ClientController extends Controller
      */
     public function index()
     {
-        $clients = Client::all();
-        return view ('afficherclient', compact('clients'));
+       return  Client::all() -> get();
     }
 
     /**
@@ -27,6 +27,13 @@ class ClientController extends Controller
     public function create()
     {
         //
+    }
+
+
+    public function showproduct ($id){
+
+        $produits = Produit::where('id_client',$id);
+        return view ('productbyclient', compact('produits'));
     }
 
     /**
@@ -50,6 +57,7 @@ class ClientController extends Controller
     {
         //
     }
+
 
     /**
      * Show the form for editing the specified resource.

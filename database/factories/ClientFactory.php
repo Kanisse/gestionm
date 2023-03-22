@@ -21,6 +21,7 @@ class ClientFactory extends Factory
             "Prenom" => $this -> faker -> firstName(),
             "Tel" => $this -> faker -> phoneNumber(),
             "adresse" => $this -> faker -> address(),
+            
             "created_at" => now(),
             "updated_at" => now() 
         ];
