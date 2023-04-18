@@ -2,11 +2,11 @@
 
 namespace App\Policies;
 
-use App\Models\Client;
+use App\Models\Tache;
 use App\Models\User;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
-class ClientPolicy
+class TachePolicy
 {
     use HandlesAuthorization;
 
@@ -16,21 +16,21 @@ class ClientPolicy
      * @param  \App\Models\User  $user
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function viewAny(User $user, Cours $cours)
+    public function viewAny(User $user)
     {
-        $user -> id = $cours -> id_user; 
+        //
     }
 
     /**
      * Determine whether the user can view the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\Client  $client
+     * @param  \App\Models\Tache  $tache
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function view(User $user, Client $client)
+    public function view(User $user, Tache $tache)
     {
-        
+        //
     }
 
     /**
@@ -48,10 +48,10 @@ class ClientPolicy
      * Determine whether the user can update the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\Client  $client
+     * @param  \App\Models\Tache  $tache
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function update(User $user, Client $client)
+    public function update(User $user, Tache $tache)
     {
         //
     }
@@ -60,10 +60,10 @@ class ClientPolicy
      * Determine whether the user can delete the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\Client  $client
+     * @param  \App\Models\Tache  $tache
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function delete(User $user, Client $client)
+    public function delete(User $user, Tache $tache)
     {
         //
     }
@@ -72,22 +72,22 @@ class ClientPolicy
      * Determine whether the user can restore the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\Client  $client
+     * @param  \App\Models\Tache  $tache
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function restore(User $user, Client $client)
+    public function restore(User $user, Tache $tache)
     {
-        return $user -> role == "Admin";
+        //
     }
 
     /**
      * Determine whether the user can permanently delete the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\Client  $client
+     * @param  \App\Models\Tache  $tache
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function forceDelete(User $user, Client $client)
+    public function forceDelete(User $user, Tache $tache)
     {
         //
     }

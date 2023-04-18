@@ -2,7 +2,8 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ClientController;
+use App\Http\Controllers\TacheController;
+use App\Http\Controllers\AuthController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -18,4 +19,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route :: resource("clients" , ClientController::class);
+Route :: resource("taches" , Tachecontroller::class) -> middleware('auth:sanctum');

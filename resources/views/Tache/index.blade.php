@@ -7,6 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Bienvenue {{ $nom }} {{ $prenom }}</h1>
+    
+    <a href="" class="btn btn-primary"> Nouvelle tache </a>
 </body>
 </html>
