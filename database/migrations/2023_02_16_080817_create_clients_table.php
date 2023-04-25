@@ -19,6 +19,7 @@ return new class extends Migration
             $table-> String("Prenom");
             $table -> String("Tel");
             $table -> String("adresse");
+            $table -> string("photo");
             $table->timestamps();
         });
     }

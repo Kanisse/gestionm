@@ -16,8 +16,8 @@ class ClientController extends Controller
      */
     public function index()
     {
-       return  Client::all() ;
-    }
+    $clients =    Client:: paginate(4) ;
+return view('Client.index', compact('clients'));  }
 
     /**
      * Show the form for creating a new resource.

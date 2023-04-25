@@ -47,3 +47,5 @@ Route::resource('vendeur',VendeurController::class);
 
 Route::get('Csession',[SessionController::class,'creationsession']);
 Route::get('Asession',[SessionController::class,'afficherrole']);
+
+Route::resource('clients', ClientController::class);

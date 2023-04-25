@@ -21,7 +21,7 @@ class ClientFactory extends Factory
             "Prenom" => $this -> faker -> firstName(),
             "Tel" => $this -> faker -> phoneNumber(),
             "adresse" => $this -> faker -> address(),
-            
+            "photo" => $this -> faker -> image(storage_path('images'),100,100,null, false),
             "created_at" => now(),
             "updated_at" => now() 
         ];
