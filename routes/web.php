@@ -49,3 +49,4 @@ Route::get('Csession',[SessionController::class,'creationsession']);
 Route::get('Asession',[SessionController::class,'afficherrole']);
 
 Route::resource('clients', ClientController::class);
+Route::resource('produits', ProduitController::class);
