@@ -19,4 +19,6 @@ class Produit extends Model
         return $resultat;
     }
 
+
+
 }
