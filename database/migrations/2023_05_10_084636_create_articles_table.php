@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Database\Migrations\Migration;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
@@ -14,10 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        DB :: unprepared('CREATE PROCEDURE ps_product (IN prix) 
-        BEGIN 
-        select * from produits where id <= 5
-        ');
+        Schema::create('articles', function (Blueprint $table) {
+            $table->id();
+            $table -> string('Description');
+            $table -> float('Prix');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -27,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-      DB :: unprepared('DROP Procedure ps_product');
+        Schema::dropIfExists('articles');
     }
 };
